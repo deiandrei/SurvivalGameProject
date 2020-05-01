@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask m_GroundMask;
 
-    public float Speed = 12.0f;
+    public float Speed = 15.0f;
     public float Gravity = -9.81f;
     public float GroundDistance = 0.4f;
 
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isGroundHit = Physics.CheckSphere(m_GroundCheck.position, GroundDistance, m_GroundMask);
 
-        if(isGroundHit && Velocity.y < 0)
+        if (isGroundHit && Velocity.y < 0)
         {
             Velocity.y = -1.0f;
         }
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         m_Controller.Move(move * Speed * Time.deltaTime);
 
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             Velocity.y = Mathf.Sqrt(JumpHeight * -2.0f * Gravity);
         }
