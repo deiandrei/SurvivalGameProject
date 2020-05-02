@@ -76098,7 +76098,7 @@ MonoBehaviour:
   sentences:
   - Este anul 2020, iar lumea este invadata de zombii. Esti blocat in facultate,
     iar pentru a gasi ajutoare trebuie sa ajungi la iesire.
-  - Level 1
+  - Cauta indiciile pentru a scapa cu bine!
   typingSpeed: 0.02
   continueButton: {fileID: 6237953412778934767}
 --- !u!1 &6237953412841516451
