@@ -31,5 +31,7 @@ https://assetstore.unity.com/packages/3d/props/tools/free-laboratory-pack-123782
 ## Contributii
 
 Popescu Bianca Elena - design, dialog
+
 Lupoi Alexandra Oana - design, meniu
+
 Mazilu Andrei - player, zombi, colectionarea cartilor
