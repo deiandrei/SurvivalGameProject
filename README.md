@@ -2,7 +2,7 @@
 
 ## Scopul jocului
 
-Este un joc de tip survival in care trebuie sa colectezi cele 10 carti, fara a fi prins de zombii, pentru a putea iesi din cladire.
+Este un joc 3D de tip survival in care trebuie sa colectezi cele 10 carti, fara a fi prins de zombii, pentru a putea iesi din cladire.
 
 ## Controlul jucatorului
 
