@@ -4,7 +4,7 @@
 
 Este un joc de tip survival in care trebuie sa colectezi cele 10 carti, fara a fi prins de zombii, pentru a putea iesi din cladire.
 
-Controlul jucatorului:
+## Controlul jucatorului
 
 Jucatorul se poate misca cu ajutorul sagetilor sau a butoanelor A, W, S, D si poate sari apasand pe Space.
 
