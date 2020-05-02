@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController m_Controller;
     public Transform m_GroundCheck;
 
+    //public GameObject BulletPrefab;
+
     public LayerMask m_GroundMask;
 
     public float Speed = 15.0f;
@@ -15,8 +17,23 @@ public class PlayerMovement : MonoBehaviour
 
     public float JumpHeight = 3.0f;
 
+    public int HealthLevel;
+
     Vector3 Velocity;
     bool isGroundHit;
+
+    void Start()
+    {
+        HealthLevel = 10;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Zombie")
+        {
+        }
+        Debug.Log(other.tag);
+    }
 
     // Update is called once per frame
     void Update()
@@ -41,5 +58,16 @@ public class PlayerMovement : MonoBehaviour
 
         Velocity.y += Gravity * Time.deltaTime;
         m_Controller.Move(Velocity * Time.deltaTime);
+
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+        //    Vector3 shootingDir = Camera.main.transform.position + Camera.main.transform.forward;
+        //    //Debug.Log("DA");
+        //    GameObject bullet = Instantiate(BulletPrefab) as GameObject;
+        //    bullet.GetComponent<BulletScript>().Template = false;
+        //    bullet.GetComponent<BulletScript>().SetDirection(new Vector3(1, 0, 0));
+        //    bullet.transform.position = transform.position;
+
+        //}
     }
 }
