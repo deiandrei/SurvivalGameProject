@@ -8,6 +8,12 @@ public class PlayerMouseLook : MonoBehaviour
 
     public Transform m_playerBody;
     float xRotation;
+    bool m_IsPlaying = false;
+
+    public void StartPlay()
+    {
+        m_IsPlaying = true;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +27,8 @@ public class PlayerMouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!m_IsPlaying) return;
+
         float mouseX = Input.GetAxis("Mouse X") * m_MouseSensitivity * Time.deltaTime;
         
         float mouseY = Input.GetAxis("Mouse Y") * m_MouseSensitivity * Time.deltaTime;

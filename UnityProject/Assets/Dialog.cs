@@ -52,6 +52,7 @@ public class Dialog : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             GameObject.Find("PlayerPrefab").GetComponent<PlayerMovement>().StartPlay();
+            GameObject.Find("PlayerCamera").GetComponent<PlayerMouseLook>().StartPlay();
         }
     }
 }
