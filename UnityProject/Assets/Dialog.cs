@@ -49,7 +49,9 @@ public class Dialog : MonoBehaviour
         } else {
             textDisplay.text = "";
             continueButton.SetActive(false);
+            Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+            GameObject.Find("PlayerPrefab").GetComponent<PlayerMovement>().StartPlay();
         }
     }
 }

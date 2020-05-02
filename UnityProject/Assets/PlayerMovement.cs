@@ -21,23 +21,25 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 Velocity;
     bool isGroundHit;
+    bool m_IsPlaying;
 
     void Start()
     {
         HealthLevel = 10;
+        m_IsPlaying = false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void StartPlay()
     {
-        if (other.tag == "Zombie")
-        {
-        }
-        Debug.Log(other.tag);
+        m_IsPlaying = true;
     }
+
 
     // Update is called once per frame
     void Update()
     {
+        if (!m_IsPlaying) return;
+
         isGroundHit = Physics.CheckSphere(m_GroundCheck.position, GroundDistance, m_GroundMask);
 
         if (isGroundHit && Velocity.y < 0)
